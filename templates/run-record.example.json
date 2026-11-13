@@ -1,0 +1,18 @@
+{
+  "experiment": "replace-with-name",
+  "date": null,
+  "source_commit": null,
+  "tool_versions": {},
+  "bitstream_sha256": null,
+  "expected_user_code": null,
+  "simulation": "not-run",
+  "timing": "not-run",
+  "sram_program_and_readback": "not-run",
+  "functional_test": "not-run",
+  "flash_program": "not-run",
+  "flash_reload": "not-run",
+  "flash_byte_verify": "not-run",
+  "physical_power_cycle": "not-run",
+  "commands": [],
+  "notes": []
+}

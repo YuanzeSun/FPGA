@@ -1,0 +1,22 @@
+# Reproducible outputs
+**/build/
+__pycache__/
+*.py[cod]
+*.vvp
+*.vcd
+*.fst
+.venv/
+
+# Local tools and settings
+config/local.psd1
+.env
+*.zip
+*.7z
+*.exe
+*.dll
+
+# Editor and OS files
+.vs/
+.idea/
+Thumbs.db
+.DS_Store

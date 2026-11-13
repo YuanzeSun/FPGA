@@ -1,0 +1,8 @@
+ Target Cable: USB Debugger A/0/None/null@2MHz
+ Target Device: GW1NR-9C(0x1100481B)
+ Operation "Read Device Codes" for device#1...
+ ID Code is: 0x1100481B
+ User Code is: 0x000053D2
+ Status Code is: 0x0001F020
+ Finished.
+ Cost 0.1 second(s)
