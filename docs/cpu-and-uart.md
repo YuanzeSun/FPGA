@@ -17,7 +17,7 @@ Verilog SoC 和 ROM 内容 → 仿真 → 综合 → 布局布线 → FPGA 位�
 
 最小版用于先跑通 C、LED 和 UART；Full、Max 版使用 RV32IMC，加入乘除法、压缩指令、计数器、中断等功能。Max 是本机这套外围和工具链下可放入芯片的参数组合，并非把所有参数设成 1。
 
-快速乘法器候选超出资源，因此最终使用迭代乘法器；M 扩展仍保留。额外的 ALU、比较流水级会改变周期数。[PicoRV32 参数说明](https://github.com/YosysHQ/picorv32#verilog-module-parameters)
+Full和Max使用迭代乘法器，保留完整M扩展。额外的 ALU、比较流水级会改变周期数。[PicoRV32 参数说明](https://github.com/YosysHQ/picorv32#verilog-module-parameters)
 
 复现 CPU 工程时，保留 RTL 参数、`-march`、ROM/RAM 地址、CPU 时钟和串口分频之间的对应关系。Full、Max 的 CPU 为 13.5 MHz，源晶振仍是 27 MHz。
 
@@ -27,7 +27,7 @@ Verilog SoC 和 ROM 内容 → 仿真 → 综合 → 布局布线 → FPGA 位�
 
 当前实验使用 **115200、8 数据位、无校验、1 停止位、无流控**。FPGA TX 在管脚 17，RX 在管脚 18，参见 [官方 PicoTiny 约束](https://github.com/sipeed/TangNano-9K-example/blob/c3b795799f23de91982be52db4273a8eea100cdb/picotiny/project/picotiny.cst)。
 
-在已迁入的 CPU 实验目录运行：
+在PicoRV32串口实验目录运行（自写CPU的参数见各项目README）：
 
 ```powershell
 powershell.exe -NoProfile -File .\scripts\test_serial.ps1 -PortName COM6 -BaudRate 115200
@@ -37,3 +37,7 @@ powershell.exe -NoProfile -File .\scripts\console.ps1 -PortName COM6 -BaudRate 1
 先运行自动测试，结束后再开交互控制台。Full、Max 的常用命令为 `p` 查询应答、`m` 测乘除法、`i` 触发软件中断、`?` 查询状态、`0` 到 `5` 选灯；按键不用回车。
 
 串口桥可能积压旧输出。测试时先读空，再发送本次随机字符并核对应答，观察计数器持续增长。只看到启动文字，不能说明当前程序正在响应。脚本应在 `finally` 中关闭并释放串口，下载前也先退出控制台。
+
+## 自写CPU与HDMI程序
+
+SimpleRV32I是自行实现的多周期RV32I核心；算法台在该核心上执行C排序、二分查找、最大子数组和与GCD。PicoRV32是引入的官方核心，RISC-V HDMI项目中的游戏规则由C固件执行，显示模块按显存绘图。两种CPU路线在[项目目录](../experiments/README.md)中分别列出。

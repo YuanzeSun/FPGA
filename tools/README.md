@@ -1,5 +1,18 @@
 # 共用工具
 
+`build.ps1`是仓库根目录的统一构建入口，读取`config/local.psd1`并在正确的项目目录调用Windows或WSL构建脚本。它不访问开发板。
+
+```powershell
+powershell.exe -NoProfile -File tools/build.ps1 -Project hdmi-pong
+powershell.exe -NoProfile -File tools/build.ps1 -Project risc-playground -Mode 1080p45
+```
+
+`validate_repo.py`检查项目清单、源码摘要、Python/JSON语法、Gowin文件引用和Markdown链接，不执行下载操作。
+
+```powershell
+python tools/validate_repo.py
+```
+
 `prepare_gowin_fs.py` 从现有 PicoRV32 工程提取，使用 Python 标准库，不访问 USB。
 
 ```bash

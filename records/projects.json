@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-17",
+  "board": "Tang Nano 9K",
+  "projects": [
+    {
+      "id": "led-blink",
+      "name": "LED 闪烁",
+      "path": "experiments/led-blink",
+      "cpu": "无",
+      "clock_mhz": 27,
+      "verified_user_code": "0x000053D2"
+    },
+    {
+      "id": "led-chaser",
+      "name": "六灯流水灯",
+      "path": "experiments/led-chaser",
+      "cpu": "无",
+      "clock_mhz": 27,
+      "verified_user_code": "0x00004F45"
+    },
+    {
+      "id": "picorv32-uart",
+      "name": "PicoRV32 最小串口 SoC",
+      "path": "experiments/picorv32-uart",
+      "cpu": "PicoRV32",
+      "clock_mhz": 27,
+      "verified_user_code": "0x00001835"
+    },
+    {
+      "id": "picorv32-full",
+      "name": "PicoRV32 RV32IMC SoC",
+      "path": "experiments/picorv32-full",
+      "cpu": "PicoRV32",
+      "clock_mhz": 13.5,
+      "verified_user_code": "0x00001265"
+    },
+    {
+      "id": "picorv32-max",
+      "name": "PicoRV32 扩展参数 SoC",
+      "path": "experiments/picorv32-max",
+      "cpu": "PicoRV32",
+      "clock_mhz": 13.5,
+      "verified_user_code": "0x0000DACA"
+    },
+    {
+      "id": "simple-rv32i",
+      "name": "自写 RV32I CPU",
+      "path": "experiments/simple-rv32i",
+      "cpu": "SimpleRV32I",
+      "clock_mhz": 13.5,
+      "verified_user_code": "0x00008C00"
+    },
+    {
+      "id": "rv32i-algorithms",
+      "name": "自写 CPU 算法实验台",
+      "path": "experiments/rv32i-algorithms",
+      "cpu": "SimpleRV32I",
+      "clock_mhz": 13.5,
+      "verified_user_code": "0x0000201B"
+    },
+    {
+      "id": "hdmi-pong",
+      "name": "HDMI Pong",
+      "path": "experiments/hdmi-pong",
+      "cpu": "无",
+      "clock_mhz": 25.2,
+      "verified_user_code": "0x0000CFD8"
+    },
+    {
+      "id": "hdmi-arcade",
+      "name": "HDMI 三游戏合集",
+      "path": "experiments/hdmi-arcade",
+      "cpu": "无",
+      "clock_mhz": 25.2,
+      "verified_user_code": "0x0000BF66"
+    },
+    {
+      "id": "risc-playground",
+      "name": "RISC-V 游戏与中文显示",
+      "path": "experiments/risc-playground",
+      "cpu": "PicoRV32",
+      "clock_mhz": 25.2,
+      "verified_user_code": "0x0000C335"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+Apycula==0.32
+click==8.5.1
+fastcrc==0.5.0
+msgspec==0.22.0
+numpy==2.5.4
+platformdirs==4.14.5
+wasmtime==47.0.1
+yowasp-nextpnr-himbaechel-gowin==0.11.1.0.post826
+yowasp-runtime==1.96
+yowasp-yosys==0.71.0.0.post1285

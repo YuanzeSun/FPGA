@@ -1,0 +1,12 @@
+{
+  "glyph_count": 256,
+  "unique_chinese_characters": 46,
+  "font_rom_bytes": 8192,
+  "letter_characters": 57,
+  "letter_status": "Editable example draft; previous requested wording was not available.",
+  "font_sources": [
+    "C:\\Windows\\Fonts\\consola.ttf",
+    "C:\\Windows\\Fonts\\simhei.ttf"
+  ],
+  "font_hex_sha256": "5073bbdb80702d82dc0fe1039435a6dd14955984892ecc5320aad57e8a880fba"
+}

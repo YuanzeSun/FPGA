@@ -29,7 +29,7 @@ Tang Nano 9K 的器件名在不同工具里写法不同：
 
 板载晶振为 27 MHz，管脚 52；六颗用户 LED 对应 10、11、13、14、15、16，低电平点亮。管脚来源见 [Apicula 0.10 约束](https://raw.githubusercontent.com/YosysHQ/apicula/0.10.0/examples/tangnano9k.cst)。
 
-引脚号和电气标准要分别核对。当前 [Apicula 板卡参考](https://raw.githubusercontent.com/YosysHQ/apicula/master/examples/tangnano9k.cst) 对这些 LED 使用 `LVCMOS18`；早期本机实验写成了 `LVCMOS33`。迁移旧约束时，应按板卡原理图复核 VCCIO，并重新构建验证，不直接作为新实验模板。
+引脚号和电气标准要分别核对。板卡LED所在bank为1.8V；新设计应按板卡原理图选择匹配VCCIO的电气标准，使用LVCMOS18作为该bank的参考。复现实测配置时使用项目自带约束，不跨项目混用。
 
 ## 编译顺序
 

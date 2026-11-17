@@ -1,0 +1,1 @@
+`define LETTER_LENGTH 57

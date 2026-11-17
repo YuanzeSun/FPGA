@@ -1,0 +1,146 @@
+{
+  "repository": "https://github.com/sipeed/TangNano-9K-example",
+  "commit": "c3b795799f23de91982be52db4273a8eea100cdb",
+  "files": [
+    {
+      "path": "src/hdmi.cst",
+      "sha256": "49e2ab83e3e169326f0ef9c50eb82c51ae6a0013099f0d3dcf4cc8b9127ad414",
+      "same_as_official_hdmi_source": false
+    },
+    {
+      "path": "src/hdmi.sdc",
+      "sha256": "833db61cb779f8bbcc43351c6eee76b5385361ba3239ff3acf2a731103ade57e",
+      "same_as_official_hdmi_source": true
+    },
+    {
+      "path": "src/pong_stream.v",
+      "sha256": "d9238c14da107dda829ca4c9eaf55a59889fe0c4810da90ba69b64d11d07813e",
+      "same_as_official_hdmi_source": false
+    },
+    {
+      "path": "src/svo_hdmi.v",
+      "sha256": "874ac53bb34eb62e18b9caf13c533cb663764c95d377eb6ecde1cde030caa82f",
+      "same_as_official_hdmi_source": false
+    },
+    {
+      "path": "src/top.v",
+      "sha256": "0eecb875dbd2001e05e058a6d9b8e9ace6ca58f107e1f1335dafae2b2aa81453",
+      "same_as_official_hdmi_source": false
+    },
+    {
+      "path": "src/game/pong_render.v",
+      "sha256": "cdeac1143ade8a95f4990033d8dc2d164e77b78b2af3aa9d65f677ec4e3e461a",
+      "same_as_official_hdmi_source": false
+    },
+    {
+      "path": "src/game/pong_system.v",
+      "sha256": "bfd9b62c7cc724b751d781820364b9f90c13f1dfdf9abeeb3108950c9038091a",
+      "same_as_official_hdmi_source": false
+    },
+    {
+      "path": "src/game/simpleuart.v",
+      "sha256": "f3450272094de75e4f447fb41b09142636382b5fc20f7dcd1dfd471c58e7c1b7",
+      "same_as_official_hdmi_source": false
+    },
+    {
+      "path": "src/game/svo_defines.vh",
+      "sha256": "17fab7afd11bde3aca621eba289ab415592a4f4faca8df96be3076053b52ac00",
+      "same_as_official_hdmi_source": false
+    },
+    {
+      "path": "src/game/svo_pong.v",
+      "sha256": "9034858f5349fadde554450032954aa9fef02f434cad4931115d04bae9d7ac96",
+      "same_as_official_hdmi_source": false
+    },
+    {
+      "path": "src/game/telemetry_format.vh",
+      "sha256": "f63f561dfab84e26dfedb79a93a3c6b34425ab294e3dd7ff68f11216fc789268",
+      "same_as_official_hdmi_source": false
+    },
+    {
+      "path": "src/game/video_timing.v",
+      "sha256": "f8dba8c9fcc73b204af8c0ce136e60b69e340cfe0666b9679b56134aa042fd37",
+      "same_as_official_hdmi_source": false
+    },
+    {
+      "path": "src/gowin_clkdiv/gowin_clkdiv.ipc",
+      "sha256": "1a14beb9315169739f167d50bd9f9d656e1d24162540e6863d4c6b7c03f7135f",
+      "same_as_official_hdmi_source": true
+    },
+    {
+      "path": "src/gowin_clkdiv/gowin_clkdiv.mod",
+      "sha256": "0c6534d7710348acdb96f945efcf309e0067fe75f64cfdd66394fc4e82a2c36f",
+      "same_as_official_hdmi_source": true
+    },
+    {
+      "path": "src/gowin_clkdiv/gowin_clkdiv.v",
+      "sha256": "28c4dad7484251cde80da0a94b2777c4ef29b9952ff51fb0a49526b63d402263",
+      "same_as_official_hdmi_source": true
+    },
+    {
+      "path": "src/gowin_rpll/gowin_rpll.ipc",
+      "sha256": "7a038b178131e2eee9e182245be1d738847a4290a38cf458c5ab2d07087fc8f7",
+      "same_as_official_hdmi_source": true
+    },
+    {
+      "path": "src/gowin_rpll/gowin_rpll.mod",
+      "sha256": "01f352347bb1df6822350bca57e294534461c8eae0b5268886d4fbf66fb81041",
+      "same_as_official_hdmi_source": true
+    },
+    {
+      "path": "src/gowin_rpll/gowin_rpll.v",
+      "sha256": "7e8b694cf6edf9315135d4614f35de7c873f294248b352d3a1aca2d46bfcbda7",
+      "same_as_official_hdmi_source": true
+    },
+    {
+      "path": "src/hdmi/svo_defines.vh",
+      "sha256": "17fab7afd11bde3aca621eba289ab415592a4f4faca8df96be3076053b52ac00",
+      "same_as_official_hdmi_source": true
+    },
+    {
+      "path": "src/hdmi/svo_enc.v",
+      "sha256": "64144a4a64c862dff6702a8f541e8bf2a9bfcc365a3525f23ef9c9ec9905d4a0",
+      "same_as_official_hdmi_source": true
+    },
+    {
+      "path": "src/hdmi/svo_hdmi_top.v",
+      "sha256": "614629f9abdc3eab8a3a7879d0bc854dda1af6420ebea3caa90712c915258f73",
+      "same_as_official_hdmi_source": true
+    },
+    {
+      "path": "src/hdmi/svo_openldi.v",
+      "sha256": "8fb94db3028c7ec13fb04405ab56a51186fb3a7a436196d2b1a8e98496c528c5",
+      "same_as_official_hdmi_source": true
+    },
+    {
+      "path": "src/hdmi/svo_pong.v",
+      "sha256": "f90f0928a5b4c566d32fd990f91f6dc226e28722f3ca8f24c76b67118542bf8a",
+      "same_as_official_hdmi_source": true
+    },
+    {
+      "path": "src/hdmi/svo_tcard.v",
+      "sha256": "fcf5bf6ca8ebad64494dbcee233d282d1cdb5b440322f750f8f869f09d3971af",
+      "same_as_official_hdmi_source": true
+    },
+    {
+      "path": "src/hdmi/svo_term.v",
+      "sha256": "34baae753ae76a677917307f12f9ea652b0ddd7fa039ced1b2f5ec856972c24c",
+      "same_as_official_hdmi_source": true
+    },
+    {
+      "path": "src/hdmi/svo_tmds.v",
+      "sha256": "e3fb0d5d24dbbcf7f3960f31e8f4e308bbaef4939bc922f35b620d16e9cf681b",
+      "same_as_official_hdmi_source": true
+    },
+    {
+      "path": "src/hdmi/svo_utils.v",
+      "sha256": "f386dc85f43966fff38febb248ee838adc148a897326700fd2606d678ef30751",
+      "same_as_official_hdmi_source": true
+    },
+    {
+      "path": "src/hdmi/svo_vdma.v",
+      "sha256": "62aed05ac12d04d8e98abb525d1c2a16537b830c861df6475b97f99a4961a72b",
+      "same_as_official_hdmi_source": true
+    }
+  ]
+}

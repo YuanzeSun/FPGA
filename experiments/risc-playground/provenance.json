@@ -1,0 +1,40 @@
+{
+  "repository": "https://github.com/sipeed/TangNano-9K-example",
+  "commit": "c3b795799f23de91982be52db4273a8eea100cdb",
+  "files": [
+    {
+      "upstream_path": "hdmi/src/hdmi/svo_defines.vh",
+      "copied_to": "src/hdmi/svo_defines.vh",
+      "sha256": "17fab7afd11bde3aca621eba289ab415592a4f4faca8df96be3076053b52ac00",
+      "modified": false
+    },
+    {
+      "upstream_path": "hdmi/src/hdmi/svo_tmds.v",
+      "copied_to": "src/hdmi/svo_tmds.v",
+      "sha256": "e3fb0d5d24dbbcf7f3960f31e8f4e308bbaef4939bc922f35b620d16e9cf681b",
+      "modified": false
+    },
+    {
+      "upstream_path": "picotiny/hw/simpleuart.v",
+      "copied_to": "src/vendor/simpleuart.v",
+      "sha256": "f3450272094de75e4f447fb41b09142636382b5fc20f7dcd1dfd471c58e7c1b7",
+      "modified": false
+    },
+    {
+      "upstream_path": "picotiny/hw/picorv32.v",
+      "copied_to": "src/vendor/picorv32.v",
+      "sha256": "f241deae875a3298e82d489078d2e405c1b275dad470851a7a66184e58bc1381",
+      "modified": false
+    }
+  ],
+  "video_output": {
+    "upstream": "Sipeed SVO / Gowin primitives",
+    "cpu_and_c_firmware_unchanged_for_hd": true,
+    "verified_modes": [
+      "640x480@60",
+      "1280x720@60",
+      "1920x1080@30",
+      "1920x1080@45"
+    ]
+  }
+}

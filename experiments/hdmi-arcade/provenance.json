@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/sipeed/TangNano-9K-example",
+  "commit": "c3b795799f23de91982be52db4273a8eea100cdb",
+  "files": [
+    {
+      "upstream_path": "picotiny/hw/simpleuart.v",
+      "copied_to": "src/vendor/simpleuart.v",
+      "sha256": "f3450272094de75e4f447fb41b09142636382b5fc20f7dcd1dfd471c58e7c1b7",
+      "modified": false
+    }
+  ]
+}

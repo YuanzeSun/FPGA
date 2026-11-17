@@ -1,5 +1,6 @@
 # Reproducible outputs
 **/build/
+**/impl/
 __pycache__/
 *.py[cod]
 *.vvp
@@ -9,11 +10,22 @@ __pycache__/
 
 # Local tools and settings
 config/local.psd1
+**/toolchain.local.json
+*.gprj.user
+**/SHA256SUMS
+**/build-commands.txt
+# Local introductory exercise; not part of the verified project collection.
+/experiments/led-basics/
 .env
 *.zip
 *.7z
 *.exe
 *.dll
+*.fs
+*.bin
+*.bit
+*.elf
+*.map
 
 # Editor and OS files
 .vs/

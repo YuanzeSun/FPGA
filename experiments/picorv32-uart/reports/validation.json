@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-17",
+  "project": "picorv32-uart",
+  "board": "Tang Nano 9K",
+  "device": "GW1NR-LV9QN88PC6/I5",
+  "device_id": "0x1100481B",
+  "implementation": {
+    "cpu": "PicoRV32",
+    "clock_mhz": 27
+  },
+  "validation": {
+    "simulation": "PASS",
+    "timing": "PASS",
+    "sram_program_and_readback": "PASS",
+    "uart": "PASS",
+    "physical_observation": {
+      "status": "not-applicable",
+      "detail": ""
+    }
+  },
+  "verified_bitstream": {
+    "user_code": "0x00001835",
+    "sha256": "6ca16775408c13fffd09fdfe0760f8fbdd6b1f61a68f612d52fdd312ee4cad31",
+    "configuration_sha256": "e70fe14a2f0c648e7a7e4f7976d714b5c470de636a7a3cf7e9fd6e36038bfddb",
+    "configuration_matches_hardware_verified": true
+  },
+  "source_snapshot_sha256": {
+    "src/pico_uart_soc.v": "bb6118ec21405efe4ff8e78d940b9f3167c8e7c84ef9badd0d937cbe74955ff9",
+    "src/top.v": "676da231bc5b77085ee0cebde07c3cb3cd635a1482947207572000877477d6b4",
+    "src/vendor/picorv32.v": "f241deae875a3298e82d489078d2e405c1b275dad470851a7a66184e58bc1381",
+    "src/vendor/simpleuart.v": "f3450272094de75e4f447fb41b09142636382b5fc20f7dcd1dfd471c58e7c1b7",
+    "constraints/tangnano9k.cst": "dc259c39af72cb853b7ab858fc952dad6fb4922623d145e106a0fab75e028d30",
+    "firmware/link.ld": "a289fba6b0fb0fee07fd990d29e5f5ba0d6b6c68c2471e7f4b0ced2fb29f350d",
+    "firmware/main.c": "7ebc00ef3599128e98175cab6139447700060a220ca5143da406867cf2f2cb72",
+    "firmware/start.S": "421363ef0ab4fc941251c7fe14006a39118203695767d187cdd8995b72b2de59"
+  },
+  "timing": {
+    "soc.clk": {
+      "achieved": 43.463138580322266,
+      "constraint": 27
+    }
+  },
+  "build_checks": {
+    "firmware_binary_bytes": 738,
+    "all_frame_crcs_passed": true
+  },
+  "reproducible_build": {
+    "result": "PASS",
+    "timing": "PASS",
+    "hardware_accessed": false,
+    "firmware_bytes": 738
+  }
+}

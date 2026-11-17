@@ -1,0 +1,21 @@
+{
+  "implementation": "Original teaching RV32I CPU and peripherals written for this project",
+  "cpu_upstream_rtl_imported": false,
+  "specification": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+  "board_reference": "https://wiki.sipeed.com/hardware/zh/tang/Tang-Nano-9K/Nano-9K.html",
+  "manufacturer_primitive": "Gowin rPLL",
+  "source_hashes": {
+    "src/rv32_alu.v": "a86bb688c972deff2dceb37930a5ab42ee068da3343ea7768747d06279a70455",
+    "src/rv32_core.v": "0b712ff36ff543ce25dbd18c3ba79a8dcd2eba22d3e7e71e335c44f4bcd370a1",
+    "src/rv32_decode.v": "535cd553febc3708f5e58487c7c24d96a9b5fb9352d3b439c38948e2b4f32ff8",
+    "src/rv32_regfile.v": "778381b8d16c2c200141f5ebd6a7280bd922772cf3c720f4d39d79f15fa0d50e",
+    "src/simple_soc.v": "69e285309dfba98598167c7714803ff4733223f16d4f0cdfd1d53e141fb90026",
+    "src/top.v": "7616e0e89b30b8af31ce420251a9a60816483113e432a6ad9b8c98affa4aaabc",
+    "src/uart.v": "8983612fe56f5b2d6a42f7987e379c074bc82f111edf951f2d33f3368eb616cf",
+    "firmware/link.ld": "fa46530d3c3ea9c65858c2ad520d3c02cbf0043b17a396e77ab61200d8e05848",
+    "firmware/main.c": "90fa863e12728d42ac08f0f5046272aeba38da66bff2c95849157798b9ce169f",
+    "firmware/start.S": "ddc433e95db3751e005391a7f22ff530c2c4183810743904a86b8719f254f596",
+    "constraints/clocks.sdc": "b064de5a69ecb0da570c87540ffe8a3688d4b71726cba41c6853d551189fe62e",
+    "constraints/tangnano9k.cst": "50e739f50bf6777f66f4bc6181e186ee8ed5aebbcbb037815aa74fb0c41be554"
+  }
+}

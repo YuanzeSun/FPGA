@@ -1,0 +1,357 @@
+{
+  "date": "2026-11-17",
+  "project": "rv32i-algorithms",
+  "board": "Tang Nano 9K",
+  "device": "GW1NR-LV9QN88PC6/I5",
+  "device_id": "0x1100481B",
+  "implementation": {
+    "cpu": "SimpleRV32I",
+    "clock_mhz": 13.5
+  },
+  "validation": {
+    "simulation": "PASS",
+    "timing": "PASS",
+    "sram_program_and_readback": "PASS",
+    "uart": "PASS",
+    "physical_observation": {
+      "status": "not-applicable",
+      "detail": ""
+    }
+  },
+  "verified_bitstream": {
+    "user_code": "0x0000201B",
+    "sha256": "27a3e1af220b592f380c13fb3db94c64a8ef63e1cf61df2b2d59108fb7cfc542",
+    "configuration_sha256": "815eaebe8f825736b82e0f1e2c5670f25a0c519643d8ae266ac5c52344413750",
+    "configuration_matches_hardware_verified": true
+  },
+  "source_snapshot_sha256": {
+    "src/rv32_alu.v": "a86bb688c972deff2dceb37930a5ab42ee068da3343ea7768747d06279a70455",
+    "src/rv32_core.v": "0b712ff36ff543ce25dbd18c3ba79a8dcd2eba22d3e7e71e335c44f4bcd370a1",
+    "src/rv32_decode.v": "535cd553febc3708f5e58487c7c24d96a9b5fb9352d3b439c38948e2b4f32ff8",
+    "src/rv32_regfile.v": "778381b8d16c2c200141f5ebd6a7280bd922772cf3c720f4d39d79f15fa0d50e",
+    "src/simple_soc.v": "ba48fb8f9c052e0e3ae093a9988734d4b8e4d802fc7027af623f6f296c9ab3a9",
+    "src/top.v": "7616e0e89b30b8af31ce420251a9a60816483113e432a6ad9b8c98affa4aaabc",
+    "src/uart.v": "8983612fe56f5b2d6a42f7987e379c074bc82f111edf951f2d33f3368eb616cf",
+    "constraints/clocks.sdc": "b064de5a69ecb0da570c87540ffe8a3688d4b71726cba41c6853d551189fe62e",
+    "constraints/tangnano9k.cst": "50e739f50bf6777f66f4bc6181e186ee8ed5aebbcbb037815aa74fb0c41be554",
+    "firmware/algorithms.c": "e8ad9cd18da0caff81875071e9161cb75e9c48f0c6492e479f8d30aeb2810764",
+    "firmware/algorithms.h": "5bd3228f057fc670c4e7b209f38be3c663f3027efe845b8a0c56ff7d8a54991c",
+    "firmware/link.ld": "4b8e16ac05e578eeeee5c39e2043c799c589dd50e66147dd83a2b25c0214d95e",
+    "firmware/main.c": "30a8ebdd5f9aeceea4b3909611fe45b3f2f2b7b1c4ba6d6fbb057f45b2261a92",
+    "firmware/start.S": "ddc433e95db3751e005391a7f22ff530c2c4183810743904a86b8719f254f596"
+  },
+  "timing": {
+    "cpu_clk": {
+      "achieved": 30.979894638061523,
+      "constraint": 13.500014305114746
+    }
+  },
+  "algorithm_checks": {
+    "hardware_commands": 32,
+    "host_reference_checks": 4204,
+    "isa_test_groups": 26,
+    "cpu_core_unchanged": true
+  },
+  "remaining_scope": "算法状态灯未单独完成肉眼验收。",
+  "instruction_checks": {
+    "groups": 26,
+    "tested_instruction_names": 40,
+    "retirements_compared": 2882
+  },
+  "build_checks": {
+    "firmware_bytes": 3400,
+    "isa_test": {
+      "result": "PASS",
+      "cases": [
+        {
+          "case": "random-1",
+          "retired": 957,
+          "trap": [
+            11,
+            0,
+            4088
+          ]
+        },
+        {
+          "case": "random-17",
+          "retired": 952,
+          "trap": [
+            11,
+            0,
+            4064
+          ]
+        },
+        {
+          "case": "random-2026",
+          "retired": 962,
+          "trap": [
+            11,
+            0,
+            4052
+          ]
+        },
+        {
+          "case": "ebreak",
+          "retired": 0,
+          "trap": [
+            3,
+            0,
+            0
+          ]
+        },
+        {
+          "case": "illegal",
+          "retired": 0,
+          "trap": [
+            2,
+            4294967295,
+            0
+          ]
+        },
+        {
+          "case": "mul-unsupported",
+          "retired": 0,
+          "trap": [
+            2,
+            35684787,
+            0
+          ]
+        },
+        {
+          "case": "csr-unsupported",
+          "retired": 0,
+          "trap": [
+            2,
+            3221233779,
+            0
+          ]
+        },
+        {
+          "case": "compressed-unsupported",
+          "retired": 0,
+          "trap": [
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "case": "bad-shift",
+          "retired": 0,
+          "trap": [
+            2,
+            1073746067,
+            0
+          ]
+        },
+        {
+          "case": "bad-branch",
+          "retired": 0,
+          "trap": [
+            2,
+            8803,
+            0
+          ]
+        },
+        {
+          "case": "bad-load",
+          "retired": 0,
+          "trap": [
+            2,
+            12419,
+            0
+          ]
+        },
+        {
+          "case": "bad-store",
+          "retired": 0,
+          "trap": [
+            2,
+            12323,
+            0
+          ]
+        },
+        {
+          "case": "bad-jalr",
+          "retired": 0,
+          "trap": [
+            2,
+            4327,
+            0
+          ]
+        },
+        {
+          "case": "fence-i-unsupported",
+          "retired": 0,
+          "trap": [
+            2,
+            4111,
+            0
+          ]
+        },
+        {
+          "case": "misaligned-jal",
+          "retired": 0,
+          "trap": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "case": "misaligned-jalr",
+          "retired": 0,
+          "trap": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "case": "misaligned-branch",
+          "retired": 0,
+          "trap": [
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "case": "untaken-misaligned-branch",
+          "retired": 1,
+          "trap": [
+            3,
+            4,
+            4
+          ]
+        },
+        {
+          "case": "instruction-access",
+          "retired": 2,
+          "trap": [
+            1,
+            32768,
+            32768
+          ]
+        },
+        {
+          "case": "jalr-source-equals-destination",
+          "retired": 2,
+          "trap": [
+            3,
+            12,
+            12
+          ]
+        },
+        {
+          "case": "load-access",
+          "retired": 1,
+          "trap": [
+            5,
+            32768,
+            4
+          ]
+        },
+        {
+          "case": "store-access",
+          "retired": 1,
+          "trap": [
+            7,
+            32768,
+            4
+          ]
+        },
+        {
+          "case": "misaligned-load-1",
+          "retired": 1,
+          "trap": [
+            4,
+            65537,
+            4
+          ]
+        },
+        {
+          "case": "misaligned-store-1",
+          "retired": 1,
+          "trap": [
+            6,
+            65537,
+            4
+          ]
+        },
+        {
+          "case": "misaligned-load-2",
+          "retired": 1,
+          "trap": [
+            4,
+            65537,
+            4
+          ]
+        },
+        {
+          "case": "misaligned-store-2",
+          "retired": 1,
+          "trap": [
+            6,
+            65537,
+            4
+          ]
+        }
+      ],
+      "instructions_covered": [
+        "ADD",
+        "ADDI",
+        "AND",
+        "ANDI",
+        "AUIPC",
+        "BEQ",
+        "BGE",
+        "BGEU",
+        "BLT",
+        "BLTU",
+        "BNE",
+        "EBREAK",
+        "ECALL",
+        "FENCE",
+        "JAL",
+        "JALR",
+        "LB",
+        "LBU",
+        "LH",
+        "LHU",
+        "LUI",
+        "LW",
+        "OR",
+        "ORI",
+        "SB",
+        "SH",
+        "SLL",
+        "SLLI",
+        "SLT",
+        "SLTI",
+        "SLTIU",
+        "SLTU",
+        "SRA",
+        "SRAI",
+        "SRL",
+        "SRLI",
+        "SUB",
+        "SW",
+        "XOR",
+        "XORI"
+      ],
+      "retirements_compared": 2882,
+      "branch_outcomes": 12,
+      "final_ram_compared": true,
+      "variable_memory_wait_states": true,
+      "official_compliance_certification": false
+    },
+    "all_frame_crcs_passed": true
+  },
+  "reproducible_build": {
+    "result": "PASS",
+    "timing": "PASS",
+    "hardware_accessed": false,
+    "firmware_bytes": 3400
+  }
+}

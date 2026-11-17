@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-17",
+  "project": "hdmi-arcade",
+  "board": "Tang Nano 9K",
+  "device": "GW1NR-LV9QN88PC6/I5",
+  "device_id": "0x1100481B",
+  "implementation": {
+    "cpu": "无",
+    "clock_mhz": 25.2
+  },
+  "validation": {
+    "simulation": "PASS",
+    "timing": "PASS",
+    "sram_program_and_readback": "PASS",
+    "uart": "PASS",
+    "physical_observation": {
+      "status": "PASS",
+      "detail": "用户逐个确认接球、打砖块、太空射击画面与运动正常。"
+    }
+  },
+  "verified_bitstream": {
+    "user_code": "0x0000BF66",
+    "sha256": "bce03e80952a9c1145cc9b13e98f54e7d45224801a4f1c02a7764e0db6619bae",
+    "configuration_sha256": "ddb795a561fa440bf694ee84b81810bebd5069f3e220c6740c9b0af2f453dee7",
+    "configuration_matches_hardware_verified": true
+  },
+  "source_snapshot_sha256": {
+    "src/arcade_render.v": "dfc83c1e6599dd0287a15dae691d2f7ac0e3b881a126b9224b5f50bbc3a67f41",
+    "src/arcade_stream.v": "cb76307e0b13bac3402eaf9872638c8c99c96ff7657d7283abe03699d29536f4",
+    "src/arcade_system.v": "3bfe0dd5f0d8d368e893f12ea5a3af74445d2bfb156de9eb7ffebd775c94ceff",
+    "src/breakout_game.v": "cfa3a87bc86628d127f3c0f60ee5764dc013738cbd16e0ee4aba7dad32d2962c",
+    "src/catch_game.v": "f9828e1886064f1036522a26ba28907d0b73bb855019220bd688fb5660c6cff0",
+    "src/gowin_clkdiv/gowin_clkdiv.v": "28c4dad7484251cde80da0a94b2777c4ef29b9952ff51fb0a49526b63d402263",
+    "src/gowin_rpll/gowin_rpll.v": "7e8b694cf6edf9315135d4614f35de7c873f294248b352d3a1aca2d46bfcbda7",
+    "src/hdmi/svo_defines.vh": "17fab7afd11bde3aca621eba289ab415592a4f4faca8df96be3076053b52ac00",
+    "src/hdmi/svo_enc.v": "64144a4a64c862dff6702a8f541e8bf2a9bfcc365a3525f23ef9c9ec9905d4a0",
+    "src/hdmi/svo_hdmi_top.v": "614629f9abdc3eab8a3a7879d0bc854dda1af6420ebea3caa90712c915258f73",
+    "src/hdmi/svo_openldi.v": "8fb94db3028c7ec13fb04405ab56a51186fb3a7a436196d2b1a8e98496c528c5",
+    "src/hdmi/svo_pong.v": "f90f0928a5b4c566d32fd990f91f6dc226e28722f3ca8f24c76b67118542bf8a",
+    "src/hdmi/svo_tcard.v": "fcf5bf6ca8ebad64494dbcee233d282d1cdb5b440322f750f8f869f09d3971af",
+    "src/hdmi/svo_term.v": "34baae753ae76a677917307f12f9ea652b0ddd7fa039ced1b2f5ec856972c24c",
+    "src/hdmi/svo_tmds.v": "e3fb0d5d24dbbcf7f3960f31e8f4e308bbaef4939bc922f35b620d16e9cf681b",
+    "src/hdmi/svo_utils.v": "f386dc85f43966fff38febb248ee838adc148a897326700fd2606d678ef30751",
+    "src/hdmi/svo_vdma.v": "62aed05ac12d04d8e98abb525d1c2a16537b830c861df6475b97f99a4961a72b",
+    "src/hdmi.cst": "ba6252e5f41900ccd92fc88ed345ac2fb142daacbb037ef2629d24d600df6dad",
+    "src/hdmi.sdc": "833db61cb779f8bbcc43351c6eee76b5385361ba3239ff3acf2a731103ade57e",
+    "src/invaders_game.v": "69bc7ee88399b28a0a2218fa2f9866bea3229e4113735f5db36144ffe4ca8d86",
+    "src/svo_hdmi.v": "969b4dc2660b9da22e2aac42afe46c29ae687c3d5a5a5c280261ca9275d792de",
+    "src/telemetry_format.vh": "14f27068747e56adb70c13b3d712ccb77069dcc3ec484d73d9bbdf89a7dbb77a",
+    "src/top.v": "0eecb875dbd2001e05e058a6d9b8e9ace6ca58f107e1f1335dafae2b2aa81453",
+    "src/vendor/simpleuart.v": "f3450272094de75e4f447fb41b09142636382b5fc20f7dcd1dfd471c58e7c1b7",
+    "src/video_timing.v": "f8dba8c9fcc73b204af8c0ce136e60b69e340cfe0666b9679b56134aa042fd37"
+  },
+  "timing": [
+    [
+      "1",
+      "u_pll/rpll_inst/CLKOUT.default_gen_clk",
+      "126.000(MHz)",
+      "549.678(MHz)",
+      "1",
+      "TOP"
+    ],
+    [
+      "2",
+      "u_div_5/clkdiv_inst/CLKOUT.default_gen_clk",
+      "25.200(MHz)",
+      "26.700(MHz)",
+      "15",
+      "TOP"
+    ]
+  ],
+  "setup_violated_endpoints": 0,
+  "hold_violated_endpoints": 0,
+  "build_checks": {
+    "all_frame_crcs_passed": true
+  },
+  "reproducible_build": {
+    "result": "PASS",
+    "timing": "PASS",
+    "hardware_accessed": false,
+    "firmware_bytes": null
+  }
+}

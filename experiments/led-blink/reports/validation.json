@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-17",
+  "project": "led-blink",
+  "board": "Tang Nano 9K",
+  "device": "GW1NR-LV9QN88PC6/I5",
+  "device_id": "0x1100481B",
+  "implementation": {
+    "cpu": "无",
+    "clock_mhz": 27
+  },
+  "validation": {
+    "simulation": "not-recorded",
+    "timing": "PASS",
+    "sram_program_and_readback": "PASS",
+    "uart": "not-applicable",
+    "physical_observation": {
+      "status": "PASS",
+      "detail": "用户确认单灯约半秒亮灭，并完成真实断电启动观察。"
+    }
+  },
+  "verified_bitstream": {
+    "user_code": "0x000053D2",
+    "sha256": "4abc3670afabd04ca14522ab216c48886f8f25c3b5ce3e3dafcaea78af7fd8ca",
+    "configuration_sha256": "ef38c777e1abb01f36bdecde4f6a1dea9327cb4544d178babc31e080b3b27ec7",
+    "configuration_matches_hardware_verified": true
+  },
+  "source_snapshot_sha256": {
+    "src/top.v": "83bae702b5bd3cf4b7a5981ea43ec25a9fc56dec0544485d2700636346786097",
+    "constraints/tangnano9k.cst": "c8a0e724f4ba79a96b790fa451a577733f48e889c8e2c5c83222c5550c98e51e"
+  },
+  "reproducible_build": {
+    "result": "PASS",
+    "timing": "PASS",
+    "hardware_accessed": false,
+    "firmware_bytes": null
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-17",
+  "project": "led-chaser",
+  "board": "Tang Nano 9K",
+  "device": "GW1NR-LV9QN88PC6/I5",
+  "device_id": "0x1100481B",
+  "implementation": {
+    "cpu": "无",
+    "clock_mhz": 27
+  },
+  "validation": {
+    "simulation": "PASS",
+    "timing": "PASS",
+    "sram_program_and_readback": "PASS",
+    "uart": "not-applicable",
+    "physical_observation": {
+      "status": "PASS",
+      "detail": "用户确认六灯按预期逐个点亮。"
+    }
+  },
+  "verified_bitstream": {
+    "user_code": "0x00004F45",
+    "sha256": "cad485cc2e1e41723487747bcb456b27dfc9b43ecef93dbd0bf7891f0dd6b06c",
+    "configuration_sha256": "fe1d83f32dcbcf007dc3d08fb2daf270595d4298c2cfc3fbdc0065d165a8c0fc",
+    "configuration_matches_hardware_verified": true
+  },
+  "source_snapshot_sha256": {
+    "src/top.v": "b235b544809cc83dc379a7061fa74343d0efa768665693c3ae9340662f54d4a9",
+    "constraints/tangnano9k.cst": "c8a0e724f4ba79a96b790fa451a577733f48e889c8e2c5c83222c5550c98e51e"
+  },
+  "timing": {
+    "clk_IBUF_I_O": {
+      "achieved": 299.5805969238281,
+      "constraint": 27
+    }
+  },
+  "build_checks": {},
+  "reproducible_build": {
+    "result": "PASS",
+    "timing": "PASS",
+    "hardware_accessed": false,
+    "firmware_bytes": null
+  }
+}

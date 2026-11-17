@@ -1,35 +1,46 @@
-# FPGA 项目与开发工作流
+# Tang Nano 9K FPGA 项目
 
-从 Tang Nano 9K 开始，记录实验源码、构建方法和上板结果。开发环境是 Windows 11 + WSL Ubuntu：WSL 负责编译，Windows 负责下载和串口。
+已经完成构建和上板验证的 Verilog、RISC-V 与 HDMI 项目。仓库保存正式源码、可执行的构建步骤和验收结果。
 
-## 从哪里开始
+## 项目
 
-| 要做的事 | 看这里 |
-| --- | --- |
-| 换电脑或重新装环境 | [环境搭建](docs/environment.md) |
-| 修改 RTL 并生成位流 | [日常开发](docs/development.md) |
-| 下载到 SRAM 或写入 Flash | [下载与固化](docs/programming.md) |
-| 编译 C 程序并用串口调试 | [PicoRV32 与串口](docs/cpu-and-uart.md) |
-| 下载慢、串口不通等问题 | [排错](docs/troubleshooting.md) |
-| 添加实验、整理提交 | [仓库约定](docs/repository.md) |
+| 项目 | CPU | 运行时钟 | 已验收配置 User Code |
+| --- | --- | --- | --- |
+| [LED 闪烁](experiments/led-blink/README.md) | 无 | 27 MHz | `0x000053D2` |
+| [六灯流水灯](experiments/led-chaser/README.md) | 无 | 27 MHz | `0x00004F45` |
+| [PicoRV32 最小串口 SoC](experiments/picorv32-uart/README.md) | PicoRV32 | 27 MHz | `0x00001835` |
+| [PicoRV32 RV32IMC SoC](experiments/picorv32-full/README.md) | PicoRV32 | 13.5 MHz | `0x00001265` |
+| [PicoRV32 扩展参数 SoC](experiments/picorv32-max/README.md) | PicoRV32 | 13.5 MHz | `0x0000DACA` |
+| [自写 RV32I CPU](experiments/simple-rv32i/README.md) | SimpleRV32I | 13.5 MHz | `0x00008C00` |
+| [自写 CPU 算法实验台](experiments/rv32i-algorithms/README.md) | SimpleRV32I | 13.5 MHz | `0x0000201B` |
+| [HDMI Pong](experiments/hdmi-pong/README.md) | 无 | 25.2 MHz | `0x0000CFD8` |
+| [HDMI 三游戏合集](experiments/hdmi-arcade/README.md) | 无 | 25.2 MHz | `0x0000BF66` |
+| [RISC-V 游戏与中文显示](experiments/risc-playground/README.md) | PicoRV32 | 25.2 MHz | `0x0000C335` |
 
-常用顺序是：**修改源码 → 仿真 → 综合和布局布线 → 查看时序 → SRAM 加载 → 验证功能**。程序稳定后，再考虑写入 Flash。
+HDMI Pong、三游戏合集的游戏逻辑和绘图由 Verilog 硬件实现。RISC-V 游戏由官方 PicoRV32 执行 C 固件；SimpleRV32I 与算法实验台使用自行实现的 CPU。电脑负责构建、加载和发送输入。
 
-## 目录
+RISC-V 游戏支持已实测的 **640×480／60 Hz、1280×720／60 Hz、1920×1080／30 Hz、1920×1080／45 Hz**。字符画布为640×480，1080p输出按整数2倍放大；输出分辨率与游戏逻辑分辨率分别说明，见[视频实现](docs/video.md)。
 
-```text
-docs/          操作指南
-experiments/   实验，每个实验一个目录
-tools/         共用的小工具
-config/        本机配置示例
-templates/     实验说明和运行记录模板
-records/       已验证的工具组合与历史结果
+## 构建与运行
+
+环境为 Windows 11 + WSL Ubuntu-24.04。先按[环境说明](docs/environment.md)准备工具和本机配置，在仓库根目录运行：
+
+```powershell
+Copy-Item config/local.example.psd1 config/local.psd1
+# 修改local.psd1中的实际工具路径；配置文件不提交Git。
+powershell.exe -NoProfile -File tools/build.ps1 -Project rv32i-algorithms
+powershell.exe -NoProfile -File tools/build.ps1 -Project risc-playground -Mode 1080p45
 ```
 
-本机已跑通的版本、下载器设置和实验结果见 [验证基线](records/verified-baseline.md)。它是一份历史记录，当前板上运行什么，以最近一次下载为准。
+构建不访问开发板。构建通过后，进入相应实验目录，使用其启动器或下载脚本加载SRAM。具体输入和控制方式见项目README；通用操作见[下载](docs/programming.md)。
 
-## 第一次使用
+## 阅读入口
 
-复制 `config/local.example.psd1` 为 `config/local.psd1`，按电脑上的实际路径和串口号修改。后者由 Git 忽略。
+- [项目目录](experiments/README.md)：功能、构建与控制方式。
+- [开发流程](docs/development.md)：仿真、时序和位流检查。
+- [CPU与串口](docs/cpu-and-uart.md)：C固件、地址映射和实际执行位置。
+- [HDMI视频](docs/video.md)：像素流、跨时钟域、时序与分辨率。
+- [验收基线](records/verified-baseline.md)：实际验证范围及记录。
+- [仓库约定](docs/repository.md)：正式源码与验证摘要的组织方式。
 
-已有的 LED、走马灯和 PicoRV32 工程还在上一级实验总目录。后续迁入 `experiments/` 时，按 [仓库约定](docs/repository.md) 逐个整理。
+`experiments/`每个项目都有独立源码、约束、仿真、脚本和`reports/validation.json`。`build/`、`impl/`、工具软件和本机配置不进入Git。第三方代码保留版权头，固定来源见各项目`provenance.json`。

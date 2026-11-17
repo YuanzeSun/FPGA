@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-17",
+  "project": "picorv32-full",
+  "board": "Tang Nano 9K",
+  "device": "GW1NR-LV9QN88PC6/I5",
+  "device_id": "0x1100481B",
+  "implementation": {
+    "cpu": "PicoRV32",
+    "clock_mhz": 13.5
+  },
+  "validation": {
+    "simulation": "PASS",
+    "timing": "PASS",
+    "sram_program_and_readback": "PASS",
+    "uart": "PASS",
+    "physical_observation": {
+      "status": "not-applicable",
+      "detail": ""
+    }
+  },
+  "verified_bitstream": {
+    "user_code": "0x00001265",
+    "sha256": "5db0f3ea38563b1a7af8781f67c97c68428b479e5fa5607f360a386f59b3c02c",
+    "configuration_sha256": "e96b431ee099b880021425f6278a01f8aed0724ddba51e9ad0a4b77277c95f8e",
+    "configuration_matches_hardware_verified": true
+  },
+  "source_snapshot_sha256": {
+    "src/pico_uart_soc.v": "c33e86c9bd5b1c62b0b70b6a02d8e6f79b422eb94d198000b5e56b0f260b68a4",
+    "src/top.v": "4356af0581aa54f3b1f7d1e2bd2ef5a2ad4f499a8c7557f3a45c93d8a0f0d262",
+    "src/vendor/picorv32.v": "f241deae875a3298e82d489078d2e405c1b275dad470851a7a66184e58bc1381",
+    "src/vendor/simpleuart.v": "f3450272094de75e4f447fb41b09142636382b5fc20f7dcd1dfd471c58e7c1b7",
+    "constraints/tangnano9k.cst": "dc259c39af72cb853b7ab858fc952dad6fb4922623d145e106a0fab75e028d30",
+    "firmware/golden_vectors.h": "eb417bc2811e3645411372fc4edf0ee95cf7c3ba3b3e413063b927cd90131dd0",
+    "firmware/link.ld": "5d249a0e0bd6d1fb26af4922210a88f183ef0cb3739d7d42c25889c2646231ea",
+    "firmware/main.c": "d3f0ce3bfb87a0f9815d8810c83342b22ce22a254829531ace0a2c90f8ac90c3",
+    "firmware/start.S": "de8109d24dd82735a2872ae3c80f9b7f16b12a001578c60634db2c7e92876ae4"
+  },
+  "timing": {
+    "cpu_clk": {
+      "achieved": 22.689632415771484,
+      "constraint": 13.5
+    }
+  },
+  "build_checks": {
+    "firmware_binary_bytes": 2084,
+    "selftest_expected_mask": "0x000000ff",
+    "m_extension_vectors": 4,
+    "m_extension_operations_per_vector": 8,
+    "all_frame_crcs_passed": true
+  },
+  "reproducible_build": {
+    "result": "PASS",
+    "timing": "PASS",
+    "hardware_accessed": false,
+    "firmware_bytes": 2084
+  }
+}
